@@ -417,6 +417,8 @@
     .nav-links { display: none; }
     .about-inner, .pillars-inner { grid-template-columns: 1fr; gap: 3rem; }
     .services-grid, .contact-cards { grid-template-columns: 1fr; }
+    .hero-scroll { display: none; }
+    .hero { padding-bottom: 3rem; }
   }
 </style>
 </head>
@@ -473,38 +475,59 @@
       <div class="about-wordmark-text">Black River<span>Contractors</span></div>
       <div class="carousel" id="workCarousel">
         <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="30" width="44" height="20" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <rect x="14" y="18" width="28" height="14" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <line x1="28" y1="6" x2="28" y2="18" stroke="#7a9e8e" stroke-width="1.2" opacity="0.6"/>
-              <polygon points="28,2 34,12 22,12" fill="#7a9e8e" opacity="0.5"/>
-            </svg>
-            <p>Project Photo 1</p>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_01.jpg" alt="New Construction — Metal Siding & Roofing">
+            <div class="slide-caption">New Construction — Metal Siding & Roofing</div>
           </div>
-          <div class="carousel-slide">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="30" width="44" height="20" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <rect x="14" y="18" width="28" height="14" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <line x1="28" y1="6" x2="28" y2="18" stroke="#7a9e8e" stroke-width="1.2" opacity="0.6"/>
-              <polygon points="28,2 34,12 22,12" fill="#7a9e8e" opacity="0.5"/>
-            </svg>
-            <p>Project Photo 2</p>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_02.jpg" alt="Covered Porch & Deck Build">
+            <div class="slide-caption">Covered Porch & Deck Build</div>
           </div>
-          <div class="carousel-slide">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="30" width="44" height="20" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <rect x="14" y="18" width="28" height="14" rx="1" stroke="#7a9e8e" stroke-width="1.2" fill="none" opacity="0.4"/>
-              <line x1="28" y1="6" x2="28" y2="18" stroke="#7a9e8e" stroke-width="1.2" opacity="0.6"/>
-              <polygon points="28,2 34,12 22,12" fill="#7a9e8e" opacity="0.5"/>
-            </svg>
-            <p>Project Photo 3</p>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_03.jpg" alt="Deck & Railing Installation">
+            <div class="slide-caption">Deck & Railing Installation</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_04.jpg" alt="Pergola Build">
+            <div class="slide-caption">Pergola Build</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_05.jpg" alt="Wood Privacy Fence & Gate">
+            <div class="slide-caption">Wood Privacy Fence & Gate</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_06.jpg" alt="Deck Construction">
+            <div class="slide-caption">Deck Construction</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_07.jpg" alt="Custom Planter Box">
+            <div class="slide-caption">Custom Planter Box</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_08.jpg" alt="Bathroom Remodel">
+            <div class="slide-caption">Bathroom Remodel</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_09.jpg" alt="Roof Installation">
+            <div class="slide-caption">Roof Installation</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_10.jpg" alt="Roofing & Siding">
+            <div class="slide-caption">Roofing & Siding</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_11.jpg" alt="Craftsman at Work">
+            <div class="slide-caption">Craftsman at Work</div>
+          </div>
+          <div class="carousel-slide has-img">
+            <img src="photos/photo_12.jpg" alt="Stone Fireplace & Shiplap Feature Wall">
+            <div class="slide-caption">Stone Fireplace & Shiplap Feature Wall</div>
           </div>
         </div>
         <button class="carousel-btn prev" id="prevBtn">&#8592;</button>
         <button class="carousel-btn next" id="nextBtn">&#8594;</button>
         <div class="carousel-dots" id="carouselDots"></div>
-        <div class="carousel-counter" id="carouselCounter">1 / 3</div>
+        <div class="carousel-counter" id="carouselCounter">1 / 12</div>
       </div>
     </div>
     <div class="reveal">
@@ -616,7 +639,7 @@
       </div>
       <div class="contact-card">
         <p class="contact-label">Email</p>
-        <a href="mailto:blackrivercontractorsllc@gmail.com" class="contact-val" style="font-size:0.75rem;">blackrivercontractorsllc@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#94f6f8f5f7ffe6fde2f1e6f7fbfae0e6f5f7e0fbe6e7f8f8f7d4f3f9f5fdf8baf7fbf9" class="contact-val" style="font-size:0.75rem;"><span class="__cf_email__" data-cfemail="284a44494b435a415e4d5a4b47465c5a494b5c475a5b44444b684f45494144064b4745">[email&#160;protected]</span></a>
       </div>
       <div class="contact-card">
         <p class="contact-label">Service Area</p>
@@ -633,7 +656,7 @@
   <p class="footer-copy">© 2025 Black River Contractors LLC &nbsp;·&nbsp; Southeast Missouri &nbsp;·&nbsp; All Rights Reserved</p>
 </footer>
  
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -646,6 +669,16 @@
  
   // ── CAROUSEL ──
   (function() {
+    // Lazy-load slide images on demand
+    function loadSlide(index) {
+      const slides = track.querySelectorAll('.carousel-slide');
+      if (!slides[index]) return;
+      const img = slides[index].querySelector('img[data-src]');
+      if (img) {
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+      }
+    }
     const track   = document.getElementById('carouselTrack');
     const dots    = document.getElementById('carouselDots');
     const counter = document.getElementById('carouselCounter');
@@ -667,6 +700,8 @@
     function goTo(n) {
       current = (n + total) % total;
       track.style.transform = `translateX(-${current * 100}%)`;
+      loadSlide(current);
+      loadSlide((current + 1) % total);
       dots.querySelectorAll('.carousel-dot').forEach((d, i) =>
         d.classList.toggle('active', i === current)
       );
@@ -684,15 +719,4 @@
  
     // Swipe support
     let touchStartX = 0;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
-    track.addEventListener('touchend',   e => {
-      const dx = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
-    });
- 
-    resetAuto();
-  })();
- 
-</script>
-</body>
-</html>
+    track.addEventListener('touchstart', e => { touchStartX = e.
