@@ -660,16 +660,6 @@
  
   // ── CAROUSEL ──
   (function() {
-    // Lazy-load slide images on demand
-    function loadSlide(index) {
-      const slides = track.querySelectorAll('.carousel-slide');
-      if (!slides[index]) return;
-      const img = slides[index].querySelector('img[data-src]');
-      if (img) {
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-      }
-    }
     const track   = document.getElementById('carouselTrack');
     const dots    = document.getElementById('carouselDots');
     const counter = document.getElementById('carouselCounter');
@@ -690,13 +680,11 @@
  
     function goTo(n) {
       current = (n + total) % total;
-      track.style.transform = `translateX(-${current * 100}%)`;
-      loadSlide(current);
-      loadSlide((current + 1) % total);
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
       dots.querySelectorAll('.carousel-dot').forEach((d, i) =>
         d.classList.toggle('active', i === current)
       );
-      counter.textContent = `${current + 1} / ${total}`;
+      counter.textContent = (current + 1) + ' / ' + total;
       resetAuto();
     }
  
