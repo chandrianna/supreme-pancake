@@ -398,7 +398,8 @@
   }
  
   /* ── REVEAL ── */
-  .reveal { opacity: 1; transform: none; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
  
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
@@ -704,6 +705,23 @@
  
     resetAuto();
   })();
+ 
+  // Scroll reveal
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(function(el) { revealObs.observe(el); });
+  } else {
+    // Fallback for older browsers - just show everything
+    revealEls.forEach(function(el) { el.classList.add('visible'); });
+  }
 </script>
 </body>
 </html>
